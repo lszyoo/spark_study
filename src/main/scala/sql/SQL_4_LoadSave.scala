@@ -102,7 +102,8 @@ object SQL_4_LoadSave extends App {
   // 读取 MySQL 数据
   spark.read
     .format("jdbc")
-    .option("driver", "com.mysql.cj.jdbc.Driver")
+    .option("driver", "com.mysql" +
+      ".jdbc.Driver")
     .option("url","jdbc:mysql://127.0.0.1:3306/person")
     .option("user", "root")
     .option("password", "123")
